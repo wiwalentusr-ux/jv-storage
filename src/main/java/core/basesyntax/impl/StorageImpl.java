@@ -21,6 +21,7 @@ public class StorageImpl<K, V> implements Storage<K, V> {
         int indexOfKey = getIndexOfKey(key);
         if (indexOfKey >= 0) {
             storageValue[indexOfKey] = value;
+            return;
         }
         if (size == MAX_STORAGE_SIZE) {
             throw new RuntimeException("error. Storage is full");
