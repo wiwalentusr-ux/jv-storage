@@ -7,13 +7,13 @@ public class StorageImpl<K, V> implements Storage<K, V> {
 
     private final K[] storageKey;
     private final V[] storageValue;
-
-    private int size = 0;
+    private int size ;
 
     @SuppressWarnings("unchecked")
     public StorageImpl() {
         storageKey = (K[]) new Object[MAX_STORAGE_SIZE];
         storageValue = (V[]) new Object[MAX_STORAGE_SIZE];
+        size = 0;
     }
 
     @Override
