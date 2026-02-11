@@ -7,7 +7,7 @@ public class StorageImpl<K, V> implements Storage<K, V> {
 
     private final K[] storageKey;
     private final V[] storageValue;
-    private int size ;
+    private int size;
 
     @SuppressWarnings("unchecked")
     public StorageImpl() {
